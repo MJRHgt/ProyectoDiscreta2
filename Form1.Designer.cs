@@ -28,24 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.Calcular_Btm = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // Calcular_Btm
             // 
-            this.button1.Location = new System.Drawing.Point(89, 31);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(115, 30);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Calcular_Btm.Location = new System.Drawing.Point(12, 219);
+            this.Calcular_Btm.Name = "Calcular_Btm";
+            this.Calcular_Btm.Size = new System.Drawing.Size(115, 30);
+            this.Calcular_Btm.TabIndex = 0;
+            this.Calcular_Btm.Text = "Calcular";
+            this.Calcular_Btm.UseVisualStyleBackColor = true;
+            this.Calcular_Btm.Click += new System.EventHandler(this.Calcular_Btm_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Calcular_Btm);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -54,7 +55,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Calcular_Btm;
     }
 }
 
