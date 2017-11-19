@@ -295,7 +295,7 @@
             // 
             // Prices_btm_Add
             // 
-            this.Prices_btm_Add.Location = new System.Drawing.Point(218, 139);
+            this.Prices_btm_Add.Location = new System.Drawing.Point(257, 191);
             this.Prices_btm_Add.Name = "Prices_btm_Add";
             this.Prices_btm_Add.Size = new System.Drawing.Size(75, 23);
             this.Prices_btm_Add.TabIndex = 10;
@@ -307,7 +307,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Maiandra GD", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(231, 78);
+            this.label12.Location = new System.Drawing.Point(205, 137);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(43, 15);
             this.label12.TabIndex = 9;
@@ -317,7 +317,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Maiandra GD", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(74, 78);
+            this.label11.Location = new System.Drawing.Point(3, 78);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(58, 15);
             this.label11.TabIndex = 8;
@@ -326,16 +326,16 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("OCR A Extended", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(164, 100);
+            this.label10.Font = new System.Drawing.Font("Palatino Linotype", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(147, 119);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(38, 17);
+            this.label10.Size = new System.Drawing.Size(55, 65);
             this.label10.TabIndex = 7;
-            this.label10.Text = "-->";
+            this.label10.Text = "↳";
             // 
             // Prices_txt_Price
             // 
-            this.Prices_txt_Price.Location = new System.Drawing.Point(208, 96);
+            this.Prices_txt_Price.Location = new System.Drawing.Point(208, 155);
             this.Prices_txt_Price.Name = "Prices_txt_Price";
             this.Prices_txt_Price.Size = new System.Drawing.Size(100, 20);
             this.Prices_txt_Price.TabIndex = 6;
@@ -343,9 +343,9 @@
             // Prices_cb_Connections
             // 
             this.Prices_cb_Connections.FormattingEnabled = true;
-            this.Prices_cb_Connections.Location = new System.Drawing.Point(37, 96);
+            this.Prices_cb_Connections.Location = new System.Drawing.Point(3, 96);
             this.Prices_cb_Connections.Name = "Prices_cb_Connections";
-            this.Prices_cb_Connections.Size = new System.Drawing.Size(121, 21);
+            this.Prices_cb_Connections.Size = new System.Drawing.Size(199, 21);
             this.Prices_cb_Connections.TabIndex = 5;
             // 
             // label9

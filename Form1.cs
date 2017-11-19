@@ -32,7 +32,7 @@ namespace ProyectoDiscreta2
         //====================================================Add Cities=============================================================
         private void AddCities_btm_Add_Click(object sender, EventArgs e)
         {
-            if (AddCities_txt_AddCity.Text != "")
+            if (AddCities_txt_AddCity.Text != "" && !Existe(AddCities_txt_AddCity.Text))
             {
                 ciudades.AddLast(new ciudad());
                 ciudades.ElementAt(size).setname(AddCities_txt_AddCity.Text);
@@ -41,7 +41,8 @@ namespace ProyectoDiscreta2
             }
             else
             {
-                MessageBox.Show("Por favor ingrese una ciudad");
+                MessageBox.Show("Por favor ingrese una ciudad valida");
+                AddCities_txt_AddCity.Clear();
             }
         }//añade ciudades al grafo(vertices)
 
@@ -60,27 +61,50 @@ namespace ProyectoDiscreta2
         //====================================================Connections=============================================================
         private void Connections_btm_Add_Click(object sender, EventArgs e)
         {
-            if (Connections_cb_Origin.Text != "" && Connections_cb_Destination.Text != "")
+            if ((Connections_cb_Origin.Text != "" && Connections_cb_Destination.Text != "") && (Connections_cb_Origin.Text != Connections_cb_Destination.Text))
             {
                 string origen = Connections_cb_Origin.Text;
                 string destino = Connections_cb_Destination.Text;
-                ciudades.ElementAt(GetIndexSearchingCityByName(origen)).addConection(destino);
+                Connections_cb_Origin.SelectedIndex = -1;
+                Connections_cb_Destination.SelectedIndex = -1;
+
+                if (ciudades.ElementAt(GetIndexSearchingCityByName(origen)).getConectionByName(destino) == null)
+                {
+                    ciudades.ElementAt(GetIndexSearchingCityByName(origen)).addConection(destino);
+                    ciudades.ElementAt(GetIndexSearchingCityByName(destino)).addConection(origen);
+                    Prices_cb_Connections.Items.Add(origen + " <--> " + destino);
+                }
+                else
+                    MessageBox.Show("Esa conexion ya existe");
             }
             else
-                MessageBox.Show("Por favor selecciones un origen y un destino");
+                MessageBox.Show("Por favor seleccione un origen y un destino valido");
         }//añade las conexiones existentes
 
         private void Connections_btm_Ready_Click(object sender, EventArgs e)
         {
             tabControl1.SelectTab(3);
-        }//Cambia a la siguente pestaña
+        }//Cambia a la siguente pestaña y llena el combobox
         //====================================================Connections=============================================================
 
 
         //=======================================================Prices=============================================================
         private void Prices_btm_Add_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectTab(4);
+            try{
+                string[] origenYdestino = Prices_cb_Connections.Text.Split(new[] { ' ', '<', '-', '>' }, StringSplitOptions.RemoveEmptyEntries);
+                Prices_cb_Connections.Items.Remove(origenYdestino[0] + " <--> " + origenYdestino[1]);
+                ciudades.ElementAt(GetIndexSearchingCityByName(origenYdestino[0])).getConectionByName(origenYdestino[1]).setpeso(int.Parse(Prices_txt_Price.Text));
+                ciudades.ElementAt(GetIndexSearchingCityByName(origenYdestino[1])).getConectionByName(origenYdestino[0]).setpeso(int.Parse(Prices_txt_Price.Text));
+                Prices_txt_Price.Text = "";
+            }
+            catch
+            {
+                MessageBox.Show("Ingrese un precio valido");
+            }
+
+            if (Prices_cb_Connections.Items.Count == 0)
+                tabControl1.SelectTab(4);
         }//Añade el peso a las aristas y cambia cuando se añadieron todos los pesos
         //=======================================================Prices=============================================================
 
@@ -108,6 +132,18 @@ namespace ProyectoDiscreta2
                 }
             }
             return -1;
+        }
+
+        public bool Existe(string name)
+        {
+            for (int i = 0; i < size; i++)
+            {
+                if (ciudades.ElementAt(i).getnombre() == name)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
         //=====================================================Extra Methods=============================================================
 
