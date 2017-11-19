@@ -17,9 +17,9 @@ namespace ProyectoDiscreta2
             InitializeComponent();
         }
 
-        LinkedList<string> ciudades = new LinkedList<string>();//una linkedlist que almacenara las ciudades
+        LinkedList<ciudad> ciudades = new LinkedList<ciudad>();//una linkedlist que almacenara el objeto ciudad que tiene nombre y conexiones
         int size = 0;
-
+        ciudad prueba = new ciudad();
 
         //=======================================================Start=============================================================
         private void Comenzar_Click(object sender, EventArgs e)
@@ -34,7 +34,8 @@ namespace ProyectoDiscreta2
         {
             if (AddCities_txt_AddCity.Text != "")
             {
-                ciudades.AddLast(AddCities_txt_AddCity.Text);
+                ciudades.AddLast(new ciudad());
+                ciudades.ElementAt(size).setname(AddCities_txt_AddCity.Text);
                 AddCities_txt_AddCity.Clear();
                 size++;
             }
@@ -49,8 +50,8 @@ namespace ProyectoDiscreta2
             tabControl1.SelectTab(2);
             for (int i = 0; i < size; i++)
             {
-                Connections_cb_Origin.Items.Add(ciudades.ElementAt(i));
-                Connections_cb_Destination.Items.Add(ciudades.ElementAt(i));
+                Connections_cb_Origin.Items.Add(ciudades.ElementAt(i).getnombre());
+                Connections_cb_Destination.Items.Add(ciudades.ElementAt(i).getnombre());
             }//llena los combobox de la siguiente pestaña
         }//Cambia a la siguente pestaña
         //====================================================Add Cities=============================================================
@@ -59,8 +60,15 @@ namespace ProyectoDiscreta2
         //====================================================Connections=============================================================
         private void Connections_btm_Add_Click(object sender, EventArgs e)
         {
-
-        }//añade las conexiones existentes al grafo(Aristas)
+            if (Connections_cb_Origin.Text != "" && Connections_cb_Destination.Text != "")
+            {
+                string origen = Connections_cb_Origin.Text;
+                string destino = Connections_cb_Destination.Text;
+                ciudades.ElementAt(GetIndexSearchingCityByName(origen)).addConection(destino);
+            }
+            else
+                MessageBox.Show("Por favor selecciones un origen y un destino");
+        }//añade las conexiones existentes
 
         private void Connections_btm_Ready_Click(object sender, EventArgs e)
         {
@@ -87,6 +95,22 @@ namespace ProyectoDiscreta2
 
         //=======================================================Resutls=============================================================
         //=======================================================Resutls=============================================================
+
+
+        //=====================================================Extra Methods=============================================================
+        public int GetIndexSearchingCityByName(string name)
+        {
+            for (int i = 0; i < size; i++)
+            {
+                if (ciudades.ElementAt(i).getnombre() == name)
+                {
+                    return i;
+                }
+            }
+            return -1;
+        }
+        //=====================================================Extra Methods=============================================================
+
 
 
 
@@ -140,6 +164,7 @@ namespace ProyectoDiscreta2
             return parent;
         }
         */
+
 
     }
 }
