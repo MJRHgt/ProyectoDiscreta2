@@ -16,13 +16,70 @@ namespace ProyectoDiscreta2
         {
             InitializeComponent();
         }
+        Grafo graph = new Grafo(40);
 
-        private void Calcular_Btm_Click(object sender, EventArgs e)
+        //=======================================================Start=============================================================
+        private void Comenzar_Click(object sender, EventArgs e)
         {
-        }
+            tabControl1.SelectTab(1);
+        }//Cambia a la primera pestaña
+        //=======================================================Start=============================================================
 
 
-        private int[] Dijkstra(int start, int end)
+        //====================================================Add Cities=============================================================
+        private void AddCities_btm_Add_Click(object sender, EventArgs e)
+        {
+
+        }//añade ciudades al grafo(vertices)
+
+        private void AddCities_btm_Ready_Click(object sender, EventArgs e)
+        {
+
+        }//Cambia a la siguente pestaña
+        //====================================================Add Cities=============================================================
+
+
+        //====================================================Connections=============================================================
+        private void Connections_btm_Add_Click(object sender, EventArgs e)
+        {
+
+        }//añade las conexiones existentes al grafo(Aristas)
+
+        private void Connections_btm_Ready_Click(object sender, EventArgs e)
+        {
+
+        }//Cambia a la siguente pestaña
+        //====================================================Connections=============================================================
+
+
+        //=======================================================Prices=============================================================
+        private void Prices_btm_Add_Click(object sender, EventArgs e)
+        {
+
+        }//Añade el peso a las aristas y cambia cuando se añadieron todos los pesos
+        //=======================================================Prices=============================================================
+
+
+        //===================================================Set First And Last=======================================================
+        private void SetFirstAndLast_cb_next_Click(object sender, EventArgs e)
+        {
+
+        }//Se elije el origen y destino y se calcula Dijkstra
+        //===================================================Set First And Last=======================================================
+
+
+        //=======================================================Resutls=============================================================
+        //=======================================================Resutls=============================================================
+
+
+
+
+
+
+
+
+        /*Algoritmo que encontre en internet
+        private int[] Dijkstra(string start, string end)
         {
             bool[] done = new bool[8];
             int[] parent = new int[8];
@@ -65,6 +122,9 @@ namespace ProyectoDiscreta2
             }
             return parent;
         }
+        */
+
+    }
 }
 
 
