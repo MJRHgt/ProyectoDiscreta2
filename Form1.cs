@@ -16,7 +16,10 @@ namespace ProyectoDiscreta2
         {
             InitializeComponent();
         }
-        Grafo graph = new Grafo(40);
+
+        LinkedList<string> ciudades = new LinkedList<string>();//una linkedlist que almacenara las ciudades
+        int size = 0;
+
 
         //=======================================================Start=============================================================
         private void Comenzar_Click(object sender, EventArgs e)
@@ -29,12 +32,26 @@ namespace ProyectoDiscreta2
         //====================================================Add Cities=============================================================
         private void AddCities_btm_Add_Click(object sender, EventArgs e)
         {
-
+            if (AddCities_txt_AddCity.Text != "")
+            {
+                ciudades.AddLast(AddCities_txt_AddCity.Text);
+                AddCities_txt_AddCity.Clear();
+                size++;
+            }
+            else
+            {
+                MessageBox.Show("Por favor ingrese una ciudad");
+            }
         }//añade ciudades al grafo(vertices)
 
         private void AddCities_btm_Ready_Click(object sender, EventArgs e)
         {
-
+            tabControl1.SelectTab(2);
+            for (int i = 0; i < size; i++)
+            {
+                Connections_cb_Origin.Items.Add(ciudades.ElementAt(i));
+                Connections_cb_Destination.Items.Add(ciudades.ElementAt(i));
+            }//llena los combobox de la siguiente pestaña
         }//Cambia a la siguente pestaña
         //====================================================Add Cities=============================================================
 
@@ -47,7 +64,7 @@ namespace ProyectoDiscreta2
 
         private void Connections_btm_Ready_Click(object sender, EventArgs e)
         {
-
+            tabControl1.SelectTab(3);
         }//Cambia a la siguente pestaña
         //====================================================Connections=============================================================
 
@@ -55,7 +72,7 @@ namespace ProyectoDiscreta2
         //=======================================================Prices=============================================================
         private void Prices_btm_Add_Click(object sender, EventArgs e)
         {
-
+            tabControl1.SelectTab(4);
         }//Añade el peso a las aristas y cambia cuando se añadieron todos los pesos
         //=======================================================Prices=============================================================
 
@@ -63,7 +80,7 @@ namespace ProyectoDiscreta2
         //===================================================Set First And Last=======================================================
         private void SetFirstAndLast_cb_next_Click(object sender, EventArgs e)
         {
-
+            tabControl1.SelectTab(5);
         }//Se elije el origen y destino y se calcula Dijkstra
         //===================================================Set First And Last=======================================================
 

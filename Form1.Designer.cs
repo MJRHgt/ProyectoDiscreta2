@@ -34,7 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Add_cities = new System.Windows.Forms.TabPage();
             this.AddCities_btm_Ready = new System.Windows.Forms.Button();
-            this.AddCities_txt_AddCitie = new System.Windows.Forms.TextBox();
+            this.AddCities_txt_AddCity = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.AddCities_btm_Add = new System.Windows.Forms.Button();
             this.Connections = new System.Windows.Forms.TabPage();
@@ -124,7 +124,7 @@
             // Add_cities
             // 
             this.Add_cities.Controls.Add(this.AddCities_btm_Ready);
-            this.Add_cities.Controls.Add(this.AddCities_txt_AddCitie);
+            this.Add_cities.Controls.Add(this.AddCities_txt_AddCity);
             this.Add_cities.Controls.Add(this.label2);
             this.Add_cities.Controls.Add(this.AddCities_btm_Add);
             this.Add_cities.Location = new System.Drawing.Point(4, 22);
@@ -145,12 +145,12 @@
             this.AddCities_btm_Ready.UseVisualStyleBackColor = true;
             this.AddCities_btm_Ready.Click += new System.EventHandler(this.AddCities_btm_Ready_Click);
             // 
-            // AddCities_txt_AddCitie
+            // AddCities_txt_AddCity
             // 
-            this.AddCities_txt_AddCitie.Location = new System.Drawing.Point(95, 78);
-            this.AddCities_txt_AddCitie.Name = "AddCities_txt_AddCitie";
-            this.AddCities_txt_AddCitie.Size = new System.Drawing.Size(165, 20);
-            this.AddCities_txt_AddCitie.TabIndex = 2;
+            this.AddCities_txt_AddCity.Location = new System.Drawing.Point(95, 78);
+            this.AddCities_txt_AddCity.Name = "AddCities_txt_AddCity";
+            this.AddCities_txt_AddCity.Size = new System.Drawing.Size(165, 20);
+            this.AddCities_txt_AddCity.TabIndex = 2;
             // 
             // label2
             // 
@@ -502,7 +502,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage Add_cities;
         private System.Windows.Forms.Button AddCities_btm_Ready;
-        private System.Windows.Forms.TextBox AddCities_txt_AddCitie;
+        private System.Windows.Forms.TextBox AddCities_txt_AddCity;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button AddCities_btm_Add;
         private System.Windows.Forms.TabPage Connections;

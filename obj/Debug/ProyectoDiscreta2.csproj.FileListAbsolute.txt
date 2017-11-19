@@ -1,1 +1,9 @@
 C:\Users\Laptop\Desktop\ProyectoDiscreta2\ProyectoDiscreta2\bin\Debug\ProyectoDiscreta2.exe.config
+C:\Users\Laptop\Desktop\ProyectoDiscreta2\ProyectoDiscreta2\bin\Debug\ProyectoDiscreta2.exe
+C:\Users\Laptop\Desktop\ProyectoDiscreta2\ProyectoDiscreta2\bin\Debug\ProyectoDiscreta2.pdb
+C:\Users\Laptop\Desktop\ProyectoDiscreta2\ProyectoDiscreta2\obj\Debug\ProyectoDiscreta2.csprojResolveAssemblyReference.cache
+C:\Users\Laptop\Desktop\ProyectoDiscreta2\ProyectoDiscreta2\obj\Debug\ProyectoDiscreta2.Form1.resources
+C:\Users\Laptop\Desktop\ProyectoDiscreta2\ProyectoDiscreta2\obj\Debug\ProyectoDiscreta2.Properties.Resources.resources
+C:\Users\Laptop\Desktop\ProyectoDiscreta2\ProyectoDiscreta2\obj\Debug\ProyectoDiscreta2.csproj.GenerateResource.Cache
+C:\Users\Laptop\Desktop\ProyectoDiscreta2\ProyectoDiscreta2\obj\Debug\ProyectoDiscreta2.exe
+C:\Users\Laptop\Desktop\ProyectoDiscreta2\ProyectoDiscreta2\obj\Debug\ProyectoDiscreta2.pdb
